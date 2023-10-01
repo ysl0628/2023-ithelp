@@ -2,15 +2,11 @@
 
 # 資料庫 Model 架構
 
----
-
 在 [Prisma 的章節](https://ithelp.ithome.com.tw/articles/10326491)中有稍微帶過 Model 的設置方式，以及簡短的展示了我專案中資料庫所需要的 Table 及欄位，這段落中會詳細的說明各個資料的用意，以及資料間的關聯。
 
 ![https://ithelp.ithome.com.tw/upload/images/20231001/20152073uTaf5Gle2G.png](https://ithelp.ithome.com.tw/upload/images/20231001/20152073uTaf5Gle2G.png)
 
 ## Collections ( Table ) 設計
-
----
 
 在 MongoDB 中一張 Table 以 Collection 為定義，在專案中設置了三個 Collection，User、Account 及 Link：
 
@@ -68,8 +64,6 @@
 ## 關聯性 (Relationship)
 
 # API 設計
-
----
 
 當我們完成資料庫的 Collections / Table 定義後，下一步是根據具體需求來設計 API。根據 Next.js 的 Data Fetching 章節，由於 Prisma ORM 不支援 Server Component 的 fetch 功能，我們選擇直接從資料庫獲取資料以實現 GET 方法。對於其他方法，我們採用 RESTful API 作為我們的通訊協議風格，並在 Route Handler 中進行具體實現。
 
